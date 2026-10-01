@@ -20,8 +20,12 @@ def fail(message: str) -> None:
 def main() -> None:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
     expected_skills = manifest.get("skills")
-    if not isinstance(expected_skills, list) or len(expected_skills) != 8:
-        fail("manifest must list exactly eight skills")
+    if (
+        not isinstance(expected_skills, list)
+        or not expected_skills
+        or len(expected_skills) != len(set(expected_skills))
+    ):
+        fail("manifest must list a non-empty set of unique skills")
 
     skill_root = ROOT / ".agents" / "skills"
     actual_skills = sorted(

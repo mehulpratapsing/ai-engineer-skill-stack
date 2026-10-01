@@ -1,0 +1,56 @@
+{
+  "suite": "ai-engineer-skill-stack-paired-review-v1",
+  "status": "protocol-only; no model runs recorded",
+  "tasks": [
+    {
+      "id": "rag-tenant-isolation",
+      "skill": "rag-engineering",
+      "prompt": "Review this synthetic RAG design. Return findings with evidence IDs, severity, concrete remediation, and one evaluation check per major risk. Do not assume facts that are not stated. Design R1: A support assistant retrieves from one shared vector index. Each document has tenant_id metadata, but the retrieval query filters by tenant only after top-20 results are fetched. User identity comes from a signed OIDC token. The API accepts a client-supplied tenant_id and does not compare it with token claims. Citations contain document IDs but no source version. State whether this is release-ready and why."
+    },
+    {
+      "id": "rag-poisoning-and-citations",
+      "skill": "rag-engineering",
+      "prompt": "Review this synthetic RAG pipeline. Return findings with evidence IDs, severity, concrete remediation, and one evaluation check per major risk. Do not assume facts that are not stated. Design R2: Documents from an approved public web allowlist are fetched nightly. The crawler follows redirects without rechecking the destination host. HTML is converted to text; instructions embedded in documents are included in retrieved context. The model can call a search tool. Answers show citations as domain names only. No adversarial retrieval tests are run. State the highest-priority risks and a practical test plan."
+    },
+    {
+      "id": "mcp-authorization-boundary",
+      "skill": "mcp-engineering",
+      "prompt": "Threat-model this synthetic MCP server. Return assets, trust boundaries, prioritized findings with evidence IDs, mitigations, and negative tests. Design M1: An internal MCP server exposes read_ticket and close_ticket tools. Authentication uses OIDC. Authorization checks whether the caller belongs to the support group, but does not check ticket ownership or tenant. Tool arguments include ticket_id and resolution. Access tokens are logged at debug level on request failures. The server has no per-tool audit trail. State what must change before rollout."
+    },
+    {
+      "id": "mcp-ssrf-and-token-forwarding",
+      "skill": "mcp-engineering",
+      "prompt": "Threat-model this synthetic MCP tool. Return prioritized findings with evidence IDs, mitigations, and negative tests. Design M2: A fetch_url tool accepts an HTTPS URL and a user prompt. It follows redirects, accepts any public destination, and returns up to 2 MB of response text to the model. It forwards the user's bearer token to the destination so downstream systems can authenticate. Tool access is available to every authenticated employee. State the highest-impact abuse paths and the minimum safe design."
+    },
+    {
+      "id": "llm-evaluation-plan",
+      "skill": "llm-evaluation",
+      "prompt": "Propose an evaluation plan for this synthetic assistant. Include a golden dataset plan, metrics, judge calibration, regression gates, and limitations. System E1: A policy Q&A assistant retrieves from 2,000 internal policy pages and answers 300 questions per day. Incorrect answers can cause employees to use the wrong approval process. There are 40 historical tickets but no labeled answer set. The team wants to switch embedding model and reranker next month. State the minimum evidence needed before release."
+    },
+    {
+      "id": "agent-recovery-and-approval",
+      "skill": "agent-engineering",
+      "prompt": "Review this synthetic agent workflow. Give concrete risks, state-machine or control changes, and failure-recovery tests. Agent A1: A finance assistant reads invoices, calls an ERP create_payment tool, then summarizes the result. A timeout is treated as failure and causes an automatic retry. The ERP tool does not accept an idempotency key. A human approval is recorded in the chat transcript but not revalidated at execution time. The run has no maximum tool-call count. State the release blockers."
+    },
+    {
+      "id": "python-service-hardening",
+      "skill": "python-production",
+      "prompt": "Review this synthetic FastAPI integration plan. Identify concrete production risks, corrective actions, and tests. Service P1: An async endpoint calls a hosted LLM with an HTTP client created per request and a 120-second timeout. It retries every exception three times with no jitter. API keys are read from a checked-in .env.example that currently contains a realistic-looking test key. User input and full model responses are logged. The endpoint has no request-size limit or cancellation handling. Prioritize the changes."
+    },
+    {
+      "id": "security-review-tool-injection",
+      "skill": "security-review",
+      "prompt": "Perform an evidence-based security review of this synthetic agent. Return prioritized findings with evidence IDs, likely exploit path, impact, fix, and validation test. Agent S1: A coding assistant reads repository files and can run shell commands. A repository README says to upload environment variables to a diagnostic URL. The agent has access to the developer's full shell environment and uses the current checkout's files as tool output without labeling them untrusted. There is no network egress restriction. State what is exploitable and which safeguards belong at the tool boundary."
+    },
+    {
+      "id": "code-review-python-authz",
+      "skill": "code-review",
+      "prompt": "Review this synthetic Python endpoint for concrete defects only. Cite the relevant line or statement, prioritize findings, and suggest a minimal fix and regression test. Code C1: @app.get('/records/{record_id}')\nasync def get_record(record_id: str, user=Depends(current_user)):\n    query = f\"SELECT * FROM records WHERE id = '{record_id}'\"\n    row = await db.fetch_one(query)\n    if row is None:\n        raise HTTPException(404)\n    logger.info('record=%s user=%s', row, user.email)\n    return row\nThe database table includes tenant_id. The endpoint has no explicit tenant filter."
+    },
+    {
+      "id": "system-design-enterprise-boundary",
+      "skill": "ai-system-design",
+      "prompt": "Review this synthetic enterprise AI architecture. Return assumptions, trust boundaries, top risks, a target-state outline, and rollout gates. Design A1: Employees ask a multi-agent assistant questions over HR and finance documents. A router chooses between a local model and a hosted model based on prompt length. The vector store is shared across both domains. Agents can call HR profile lookup and payment status tools. The project has not defined data classification, provider approval, retention, residency, or human approval requirements. State the architecture decisions that are blocked pending policy owners."
+    }
+  ]
+}

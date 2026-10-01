@@ -1,0 +1,29 @@
+{
+  "reviewed_at": "2026-10-02",
+  "sources": [
+    {
+      "id": "mcp-specification",
+      "name": "Model Context Protocol specification",
+      "url": "https://modelcontextprotocol.io/specification/latest",
+      "sha256": "24973dbd0faf72e581e137fda8f2a85b6501e13f61eebfbcf7658525c124eff0"
+    },
+    {
+      "id": "nist-genai-profile",
+      "name": "NIST AI Risk Management Framework Generative AI Profile",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "sha256": "2d414dddfc53cf53300b9079cfdb1a0c09e3f0f485b6d9333a2794f82bb44bda"
+    },
+    {
+      "id": "owasp-llm-top-10-2026",
+      "name": "OWASP GenAI Top 10 for LLM Applications 2026",
+      "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/",
+      "sha256": "12e0be581481d5eab165ec6bb96c7f4d3d01440051aeef39428880b13b4cfeee"
+    },
+    {
+      "id": "opentelemetry-genai-semconv",
+      "name": "OpenTelemetry GenAI semantic conventions",
+      "url": "https://raw.githubusercontent.com/open-telemetry/semantic-conventions-genai/main/docs/gen-ai/gen-ai-spans.md",
+      "sha256": "862604efbc8407230d8dd60d8cd92a4532282c229587262bda73ab0efe15573f"
+    }
+  ]
+}

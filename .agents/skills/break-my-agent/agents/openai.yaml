@@ -1,0 +1,4 @@
+interface:
+  display_name: "Break My Agent"
+  short_description: "Interview about AI system risks and evaluations"
+  default_prompt: "Use $break-my-agent to interview me about this RAG or agent system, one question at a time."

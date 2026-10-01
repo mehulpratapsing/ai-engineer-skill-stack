@@ -1,8 +1,14 @@
 # Stack Guide
 
-Choose skills by the decision or artifact required. The stack is available as eight independent skills; do not load every skill for a small task.
+Choose skills by the decision or artifact required. Start with `break-my-agent` when system context is incomplete; then use only the specialist skills needed for the decision or artifact.
 
 ## Suggested workflows
+
+### Early design discovery
+
+`break-my-agent` → `ai-system-design` → the relevant specialist skill(s) → `llm-evaluation` → `security-review` → `code-review`
+
+The interview should ask one question at a time, then hand off a concise system summary, a risk list, and an evaluation plan. It does not certify the design or authorize production testing.
 
 ### New AI product or major architecture change
 
