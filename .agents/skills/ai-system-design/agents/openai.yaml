@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI System Design"
+  short_description: "Design secure, scalable LLM and agent systems"
+  default_prompt: "Use $ai-system-design to shape this AI system and document its key decisions."

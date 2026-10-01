@@ -1,0 +1,4 @@
+interface:
+  display_name: "MCP Engineering"
+  short_description: "Build secure MCP servers, clients, and integrations"
+  default_prompt: "Use $mcp-engineering to design or implement this MCP integration."

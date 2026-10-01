@@ -1,0 +1,4 @@
+interface:
+  display_name: "LLM Evaluation"
+  short_description: "Measure model, RAG, and agent quality reproducibly"
+  default_prompt: "Use $llm-evaluation to evaluate this LLM system against defined criteria."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Engineering"
+  short_description: "Build bounded, recoverable tool-using agents"
+  default_prompt: "Use $agent-engineering to design or improve this agent workflow."

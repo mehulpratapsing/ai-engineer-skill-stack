@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Security Review"
+  short_description: "Find and prioritize AI and application security risks"
+  default_prompt: "Use $security-review to review this AI system for security risks."

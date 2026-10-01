@@ -1,0 +1,40 @@
+{
+  "name": "ai-engineer-skill-stack",
+  "version": "1.0.0",
+  "format": "portable-agent-skills",
+  "standards_reviewed": "2026-09-27",
+  "skills": [
+    "agent-engineering",
+    "ai-system-design",
+    "code-review",
+    "llm-evaluation",
+    "mcp-engineering",
+    "python-production",
+    "rag-engineering",
+    "security-review"
+  ],
+  "scope_note": "Reusable engineering baseline; organization-specific policy mappings were not supplied and are not claimed.",
+  "sha256": {
+    ".agents/skills/agent-engineering/agents/openai.yaml": "8fa3d8dd271747a1bc7c22a73f227eeb41a91b8029d2155257a74bd9a5a6c4b2",
+    ".agents/skills/agent-engineering/SKILL.md": "f671e7ef2900e4d57fef5265d132fc348a570b8b6b9a44773dbfc00cd3f21756",
+    ".agents/skills/ai-system-design/agents/openai.yaml": "9163e8ff42281ace605ace540779e0030d6c61ecfec7bf0aeb5f7745648acb32",
+    ".agents/skills/ai-system-design/SKILL.md": "ffd74a36eef097962062d0da3590eec154b90d6a3d90602f520a7a5604188328",
+    ".agents/skills/code-review/agents/openai.yaml": "ce0bae494b53994450ea1751c1f9669d3a5b44965eea1f0c7baf93e9f9751e4b",
+    ".agents/skills/code-review/SKILL.md": "d29cecb758bf49b19e9df195187921eafdb2652e9becbba242b634c1e0b07025",
+    ".agents/skills/llm-evaluation/agents/openai.yaml": "b9f8ece8f5e32e618bb048dcb32f8c70edea7543632a5257065b3db37e82f87f",
+    ".agents/skills/llm-evaluation/SKILL.md": "1d890f56691f84ae067958c3aef7da770f4b7c05d659ca3e289b0fa0e409c6e1",
+    ".agents/skills/mcp-engineering/agents/openai.yaml": "18eeeaecd0ed14de634035b3fd245b34b372dfab63a35f8111058a205b094630",
+    ".agents/skills/mcp-engineering/references/protocol-and-authorization.md": "7fefe8b303a91419419af20dd790c1b8e50a3f2c8c4ea0e2ce3d71f092e272a7",
+    ".agents/skills/mcp-engineering/SKILL.md": "ca6529d7fc2ae634af86a5f1b9c96f6c83a5610193b0d4be14b82833f9aaed25",
+    ".agents/skills/python-production/agents/openai.yaml": "81e37d53e28214d1a743a067ffc13020b48ba3be55788cc992a1c265f2b1b5bf",
+    ".agents/skills/python-production/SKILL.md": "3ded2f6fa7e0e2a01674ae4ef13c9c4a36eeffc67dbb73a3e6aa6f0317415ffc",
+    ".agents/skills/rag-engineering/agents/openai.yaml": "4b688725cefe56385fee6b7dbd2284a1e6044bc6ba65cd856f6a874f05b354a2",
+    ".agents/skills/rag-engineering/references/evaluation-diagnostics.md": "8f2cc6a717e8091027ba3768a30436a5dc06bf06ba4cfa39807165a4b15a741f",
+    ".agents/skills/rag-engineering/SKILL.md": "c85f0fdc02a2b7161fd198a43675fb7f28622ac2fd5317292ab17a22ad448cd4",
+    ".agents/skills/security-review/agents/openai.yaml": "f347ef51ba9c156787fba8cdc98f23acb626915d33d2f06f6bb4436dde61d531",
+    ".agents/skills/security-review/SKILL.md": "212d5bcb78195c98524481a061794ffd380eb3967a182829b2e581f5f6cf6914",
+    ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
+    "README.md": "8e1f021e57b9a872059072a5b40afa08cfe8f75c7c41b30b93d88578646cc51f",
+    "STACK_GUIDE.md": "c6a8c26a9434a8eca1882f6e742bafc732fd3ab997e00a877ff9d6653c5a5166"
+  }
+}

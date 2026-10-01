@@ -1,0 +1,4 @@
+interface:
+  display_name: "Python Production"
+  short_description: "Build typed, secure, observable Python services"
+  default_prompt: "Use $python-production to implement or harden this Python service."
