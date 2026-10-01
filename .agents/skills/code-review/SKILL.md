@@ -1,5 +1,6 @@
 ---
 name: code-review
+license: Apache-2.0
 description: Review a proposed code change for concrete correctness, security, performance, maintainability, testing, observability, and compatibility defects; report prioritized findings with evidence.
 ---
 

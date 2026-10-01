@@ -1,5 +1,6 @@
 ---
 name: mcp-engineering
+license: Apache-2.0
 description: Design, implement, secure, test, and deploy Model Context Protocol clients and servers, including tools, resources, prompts, authorization, and interoperability.
 ---
 
@@ -24,6 +25,8 @@ Use MCP for exposing tools and context to an AI host. Consider A2A when independ
 ## Current references
 
 Read [protocol and authorization notes](references/protocol-and-authorization.md) for version-sensitive orientation, then verify the target peers against their matching primary specifications and SDK docs. The notes are not a substitute for protocol negotiation or deployment-specific policy.
+
+When Context7 is configured, use it for focused, version-specific SDK documentation after checking the host, server, transport, and protocol versions already in use. Resolve the exact library/version, verify consequential details against the official specification and SDK docs, and keep credentials, secrets, private source code, and restricted data out of queries. Context7 is optional.
 
 - [MCP specifications](https://modelcontextprotocol.io/specification/)
 - [MCP 2026-07-28 specification](https://modelcontextprotocol.io/specification/2026-07-28)

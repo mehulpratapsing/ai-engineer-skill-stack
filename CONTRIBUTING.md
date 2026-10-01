@@ -1,0 +1,39 @@
+# Contributing
+
+Contributions are welcome when they make a skill more useful, accurate, or easier to adopt without turning the stack into a generic checklist.
+
+## Before opening a pull request
+
+- For a larger change, open an issue first and describe the use case and the skill it affects.
+- Keep the eight-skill structure unless a concrete workflow cannot fit an existing skill.
+- Preserve the distinction between general engineering guidance and organization-specific policy. Do not add client or employer names, internal policies, secrets, or confidential examples.
+- For version-sensitive advice, link primary documentation, name the applicable version when known, and explain what the guidance changes. Avoid copying large sections of upstream documentation.
+- Keep optional integrations optional. A skill must still work when an external MCP server or security tool is unavailable.
+- For security guidance, state the authorization boundary and distinguish code review from active testing.
+
+## Validate changes
+
+Refresh the file checksums, then run the packaging validator:
+
+```sh
+python scripts/update_manifest.py
+python scripts/validate_stack.py
+```
+
+When preparing a new release, set the package version with `python scripts/update_manifest.py --version X.Y.Z` before validation.
+
+If you changed installer behavior, smoke-test the relevant installer in a disposable project directory and confirm it skips an existing skill directory without overwriting it. Do not test against a profile containing valuable local skill changes.
+
+For a demo or evaluation claim, use the same input and prompt in both conditions. If you report empirical results, record the model and version, system instructions, tool configuration, run count, scoring rubric, and limitations. Hand-written examples must be labeled as illustrative, not presented as measured model output.
+
+## Pull request checklist
+
+- [ ] Explain the user problem and the affected skill(s).
+- [ ] Link primary sources for version-sensitive claims.
+- [ ] Confirm examples contain no sensitive or proprietary data.
+- [ ] Run `python scripts/validate_stack.py` and report its result.
+- [ ] Describe checks actually performed; do not claim unrun checks.
+
+## Good first issues
+
+Look for issues labeled `good first issue`. Keep first contributions small and coordinate in the issue before starting work.

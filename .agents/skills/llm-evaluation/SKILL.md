@@ -1,5 +1,6 @@
 ---
 name: llm-evaluation
+license: Apache-2.0
 description: Create and run reproducible evaluations for LLM, RAG, prompt, model, and agent changes using golden data, calibrated judges, regression gates, and risk-based analysis.
 ---
 

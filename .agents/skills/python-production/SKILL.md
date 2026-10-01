@@ -1,5 +1,6 @@
 ---
 name: python-production
+license: Apache-2.0
 description: Build or harden production Python services, APIs, workers, and AI integrations with project-aligned typing, validation, async behavior, security, observability, and operational controls.
 ---
 
@@ -24,6 +25,8 @@ Summarize the behavior changed, key contracts and operational/security choices, 
 ## Current references
 
 Confirm APIs and migration notes against the installed version before coding.
+
+When Context7 is configured, use it for focused, version-specific documentation for dependencies already selected by the project. Match the lockfile and runtime versions, verify consequential details against official docs, and keep credentials, secrets, private source code, and restricted data out of queries. Context7 is optional.
 
 - [Python documentation](https://docs.python.org/3/)
 - [Pydantic documentation](https://docs.pydantic.dev/latest/)

@@ -1,5 +1,6 @@
 ---
 name: rag-engineering
+license: Apache-2.0
 description: Design, implement, troubleshoot, and evaluate retrieval-augmented generation pipelines, from authorized ingestion through grounded answers, citations, quality, latency, and cost.
 ---
 
@@ -16,6 +17,8 @@ Use this skill whenever an application retrieves external or enterprise content 
 5. **Generate grounded answers.** Give the model clear evidence boundaries. Require citations to resolve to retrieved source spans, distinguish evidence from inference, handle conflicts and stale versions, and abstain or ask a useful follow-up when support is missing. Treat retrieved text, files, and metadata as untrusted content that may contain prompt injection.
 6. **Evaluate each stage and the whole task.** Build a representative, permission-aware golden set with expected sources/claims, hard negatives, ambiguous queries, ACL cases, stale/conflicting content, and unanswerable questions. Measure retrieval separately from answer quality, citation correctness, permission leakage, and end-to-end usefulness. Track latency percentiles, index freshness, token use, and cost. Use human review for consequential cases; metric scores are evidence, not proof.
 7. **Release safely.** Version corpus, parser, chunking, embedding, index, retriever, reranker, prompt, and model. Compare against a baseline, set slice-level regression limits, roll out gradually, and retain rollback and deletion procedures.
+
+When Context7 is configured, use it for focused, version-specific documentation for the actual vector, embedding, reranking, and evaluation libraries in the project. Match the versions in dependency files, verify consequential details against official docs, and keep credentials, secrets, private source code, and restricted data out of queries. Context7 is optional.
 
 ## Output
 

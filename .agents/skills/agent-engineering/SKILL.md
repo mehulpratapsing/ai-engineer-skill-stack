@@ -1,5 +1,6 @@
 ---
 name: agent-engineering
+license: Apache-2.0
 description: Design or improve tool-using AI agents, including planning, routing, orchestration, bounded state, memory, approvals, evaluation, and failure recovery.
 ---
 

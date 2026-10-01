@@ -1,5 +1,6 @@
 ---
 name: ai-system-design
+license: Apache-2.0
 description: Design LLM, RAG, and agent systems from business requirements through architecture, security boundaries, evaluation, operations, and rollout. Use when choosing patterns or reviewing an AI system design.
 ---
 
@@ -25,6 +26,8 @@ Use companion skills when needed: `rag-engineering` for retrieval design, `agent
 ## Current references
 
 Check current official material when it affects a decision; use the deployed stack's pinned versions and policy as constraints.
+
+When Context7 is configured, use it for focused, version-specific library documentation after inspecting the target's dependency and runtime versions. Verify consequential details against official documentation. Keep credentials, secrets, private source code, and restricted data out of Context7 queries; the integration is optional.
 
 - [NIST AI RMF Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1)
 - [OWASP GenAI Security Project](https://genai.owasp.org/)

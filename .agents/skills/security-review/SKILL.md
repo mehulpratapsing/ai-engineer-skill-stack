@@ -1,5 +1,6 @@
 ---
 name: security-review
+license: Apache-2.0
 description: Conduct evidence-based security reviews of LLM, RAG, agent, MCP, and conventional application code or architecture, prioritizing exploitable risks and actionable fixes.
 ---
 
@@ -21,6 +22,10 @@ For each confirmed issue provide: severity; file and line or precise architectur
 
 Keep the review read-only unless the user separately requests remediation. Pair with `code-review` for general change correctness and `mcp-engineering`, `rag-engineering`, or `agent-engineering` for implementation-specific workflows.
 
+## Optional dynamic testing
+
+Use Strix only when the user explicitly authorizes a defined active-testing scope. Before a run, confirm target ownership, in-scope assets and actions, environment, credentials, data handling, resource limits, and stop conditions. Prefer staging; use a clean disposable checkout for local source targets because the tool may modify them. Strix sends real exploit payloads and can change target data. Do not test production or third-party assets without explicit authorization, and use hosted mode only when the target/source data may be sent to the service under applicable policy. Manually validate and redact findings; do not apply fixes automatically. If authorization or scope is missing, keep the review read-only.
+
 ## Current references
 
 Check the latest applicable editions and the organization's control mapping; Top 10 lists are guidance, not assurance.
@@ -29,3 +34,4 @@ Check the latest applicable editions and the organization's control mapping; Top
 - [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 - [MCP security best practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices)
 - [NIST AI RMF Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1)
+- [Strix application security testing workflow](https://github.com/usestrix/strix/blob/main/skills/application-security-testing/SKILL.md)
