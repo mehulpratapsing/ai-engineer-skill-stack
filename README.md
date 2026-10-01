@@ -31,7 +31,7 @@ Copy the eight skill directories into `~/.agents/skills/` (on Windows, typically
 
 Copy the eight skill directories into `$CODEX_HOME/skills/` (typically `%USERPROFILE%\.codex\skills\` on Windows). Check for existing IDs first and merge deliberately. `agents/openai.yaml` supplies Codex-facing UI metadata; `SKILL.md` remains the portable source of instructions.
 
-The package is a ready-to-copy skill set; it has not been installed into a user profile or a target repository.
+This repository contains the portable skill set. Follow the installation instructions above to add the skills to another project or profile.
 
 ## Enterprise adoption boundary
 
