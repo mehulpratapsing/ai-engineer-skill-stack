@@ -10,6 +10,7 @@ Contributions are welcome when they make a skill more useful, accurate, or easie
 - For version-sensitive advice, link primary documentation, name the applicable version when known, and explain what the guidance changes. Avoid copying large sections of upstream documentation.
 - Keep optional integrations optional. A skill must still work when an external MCP server or security tool is unavailable.
 - For security guidance, state the authorization boundary and distinguish code review from active testing.
+- Translations and remixes are welcome. Mark derivative repositories clearly as community forks, preserve attribution and license notices, and link the upstream project.
 
 ## Validate changes
 
